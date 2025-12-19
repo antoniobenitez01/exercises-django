@@ -1,0 +1,9 @@
+{% extends 'index.html' %}
+{%block title %} Editar un AUTOR {{ author }} {%endblock title%}
+{%block content%}
+<form method="POST">
+    {%csrf_token%}
+    {{ author_form }}
+    <button type="submit">Guardar</button>
+</form>
+{%endblock content%}

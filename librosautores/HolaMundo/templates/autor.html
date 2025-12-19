@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+{%block title%}Listado de AUTORES{%endblock title%}
+{%block content%}
+<ul>
+    {% for au in authors %}
+        <li>{{ au }}</li>
+        <li><a href="/updateautor/{{ au.id }}">EDITAR</a></li>
+        <li><a href="/deleteautor/{{ au.id }}">ELIMINAR</a></li>
+    {% endfor %}
+</ul>
+<div><a href="/new-autor/">Registrar nuevo AUTOR</a></div>
+{%endblock content%}
